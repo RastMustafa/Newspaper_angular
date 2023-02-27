@@ -1,0 +1,29 @@
+<div class="row d-flex pt-5 gap-lg-4 justify-lg-content-between ">
+  <div class="col-lg-8 row col-md-12">
+    <div class="col-md-6 col-lg-6 main-card-container mt-5 mt-lg-1">
+      <h3 class="pb-3 fontfamily-header">Editor's Pick</h3>
+      <app-main-card></app-main-card>
+    </div>
+    <div
+      class="col-md-6 col-lg-6 d-flex flex-column overflow-hidden mt-5 mt-lg-1"
+    >
+      <h3 class="pt-5"></h3>
+
+      <app-news-card
+        [post]="post"
+        *ngFor="let post of posts"
+        [cardMode]="'showNumber'"
+      ></app-news-card>
+    </div>
+  </div>
+  <div class="row col-lg-4 mt-5 mt-lg-1 gap-3">
+    <h3 class="pb-3 fontfamily-header">Tranding</h3>
+
+    <app-news-card-images
+      [postnum]="i"
+      [post]="trend"
+      *ngFor="let trend of tredings; index as i"
+    >
+    </app-news-card-images>
+  </div>
+</div>

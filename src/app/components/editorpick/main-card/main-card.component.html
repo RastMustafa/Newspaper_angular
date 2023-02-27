@@ -1,0 +1,32 @@
+<div class="d-flex flex-column card-onHover">
+  <a href="{{ post.url }}">
+    <div>
+      <img
+        class="img-fluid main-card-img"
+        src="{{
+          post.urlToImage
+            ? post.urlToImage
+            : 'https://mybiros.com/wp-content/themes/qik/assets/images/no-image/No-Image-Found-400x264.png'
+        }}"
+        alt=""
+      />
+    </div>
+    <div class="card-details mt-2 p-2">
+      <div class="header">
+        News Needs to Meet Its Audiences Where They Are asd
+      </div>
+      <div class="desc">
+        {{ post.title }}
+      </div>
+      <div class="auth">
+        <span class="author">{{ post.source?.name }}</span> in
+        <span class="category"> News</span>
+      </div>
+      <div class="date-readtime">
+        <span class="readtime mx-2">
+          {{ post.publishedAt | date }} <i class="fa-solid fa-star"></i>
+        </span>
+      </div>
+    </div>
+  </a>
+</div>

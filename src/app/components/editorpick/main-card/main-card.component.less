@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@primary-fontcolor-light: #252525;
+@primary-backgroundcolor-light: #F8F8F8;
+
+@secondary-fontcolor-light: #808080;
+@secondary-fontcolor-light-action: #649130;
+
+@fontfamily-body: 'Open Sans', sans-serif;
+@fontfamily-header: 'Inter', sans-serif;
+
+.main-card-img {
+    max-height: 15rem;
+    width: 100%;
+
+}
+
+.card-details {
+
+    & .header {
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: @fontfamily-header;
+    }
+
+    & .desc {
+        font-size: 0.8rem;
+        font-family: @fontfamily-body;
+
+    }
+
+    & .auth {
+        font-size: 0.8rem;
+        margin: 0.5rem 0rem;
+
+        & span {
+            font-weight: 500;
+        }
+    }
+
+    & .date-readtime {
+        font-size: 0.8rem;
+        margin: 0.5rem 0rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

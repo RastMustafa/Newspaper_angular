@@ -1,0 +1,42 @@
+<a class="a" href="{{ appendedPost.url }}">
+  <div
+    class="mt-5 slider-card d-flex flex-lg-row flex-column primary-backgroundcolor-light"
+  >
+    <div class="col-12 col-lg-5">
+      <img
+        src="{{
+          appendedPost.urlToImage
+            ? appendedPost.urlToImage
+            : 'https://mybiros.com/wp-content/themes/qik/assets/images/no-image/No-Image-Found-400x264.png'
+        }}"
+        class="slider-img img-flu id h-1 00"
+        alt="..."
+      />
+    </div>
+    <div
+      class="col-12 slide-details col-lg-7 h-100 ps-lg-3 p-4 px-md-4 primary-backgroundcolor-light"
+    >
+      <div class="">
+        <div class="title-tag py-2">Editor's Pick</div>
+
+        <div class="slider-header">
+          {{ appendedPost.title | uppercase | slice: 1:40 }}...
+        </div>
+        <div class="slider-desc text-justify my-2 mb-4">
+          {{
+            appendedPost.description
+              ? appendedPost.description
+              : "click to read more from source page"
+          }}
+        </div>
+        <div class="author">{{ appendedPost.source?.name }}</div>
+        <div class="date-readtime mt-2">
+          <span class="readtime mx-2">
+            {{ appendedPost.publishedAt | date }}
+            <i class="fa-solid fa-star"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>

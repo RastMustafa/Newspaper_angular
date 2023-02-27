@@ -1,0 +1,58 @@
+@primary-backgroundcolor-light: #F8F8F8;
+
+
+@desktop: ~"only screen and (min-width: 992px) ";
+@mobile: ~"only screen and (min-width: 0px) ";
+
+.catagory-navbar {
+    font-size: 1rem;
+
+    // &.catagory-navbar-container {}
+
+    // &.nav-links {
+    //     &.navbar-nav {}
+    // }
+
+}
+
+.test {
+    position: absolute;
+    top: -9rem;
+    right: 0;
+
+}
+
+.nav-links {
+
+    @media @mobile {
+        position: absolute;
+        background-color: @primary-backgroundcolor-light;
+        height: 100vh;
+        padding: 6rem 4rem 4rem 1rem;
+        z-index: 2;
+        right: -30%;
+        top: -2rem;
+    }
+
+    @media @desktop {
+        position: block;
+    }
+
+
+
+}
+
+.toggle-icon {
+    position: absolute;
+    left: -1.5rem;
+    z-index: 10;
+    top: 1rem;
+    transition: all 2s linear;
+}
+
+.onActive {
+    font-weight: 500;
+    color: rgb(90, 136, 59);
+    background-color: rgba(236, 232, 232, 0.2) !important;
+    border-radius: 10px;
+}

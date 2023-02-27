@@ -1,0 +1,30 @@
+@desktop: ~"only screen and (min-width: 992px) ";
+@mobile: ~"only screen and (min-width: 0px) ";
+
+.maxh {
+    max-height: 12rem;
+    height: 100%;
+    width: 100%;
+
+    @media @desktop {
+        height: 12rem;
+
+    }
+
+    @media @mobile {
+        height: 100%;
+    }
+}
+
+.zindex {
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 0 !important;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+}

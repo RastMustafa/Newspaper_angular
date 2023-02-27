@@ -1,0 +1,130 @@
+@primary-fontcolor-light: #252525;
+@primary-backgroundcolor-light: #F8F8F8;
+
+@secondary-fontcolor-light: #808080;
+@secondary-fontcolor-light-action: #649130;
+
+@fontfamily-body: 'Open Sans', sans-serif;
+@fontfamily-header: 'Inter', sans-serif;
+@desktop: ~"only screen and (min-width: 992px) ";
+@tablet: ~"only screen and (min-width: 768px) ";
+
+@mobile: ~"only screen and (min-width: 0px) ";
+
+
+
+.slider {
+    background-color: @primary-backgroundcolor-light;
+
+    & .slider-inner {
+        @media @mobile {
+            height: auto;
+        }
+
+        @media @desktop {
+            height: 30rem;
+        }
+    }
+}
+
+.slider-img {
+
+    @media @mobile {
+        width: 100%;
+        height: 10rem;
+    }
+
+    @media @tablet {
+        width: 100%;
+        height: 20rem;
+    }
+
+    @media @desktop {
+        width: 100%;
+        height: 23rem;
+    }
+}
+
+
+
+.slider-card {
+    border-radius: 10px;
+    overflow: hidden;
+    @media @mobile {
+        height: 30rem;
+    }
+
+    @media @tablet {
+        height: 40rem;
+    }
+
+    @media @desktop {
+
+        height: 20rem;
+    }
+
+    & .title-tag {
+        font-family: @fontfamily-header;
+        color: @secondary-fontcolor-light;
+        text-transform: uppercase;
+
+    }
+
+    & .slider-header {
+        font-family: @fontfamily-header;
+        color: @primary-fontcolor-light;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+
+    & .slider-desc {
+        font-family: @fontfamily-body;
+        color: @secondary-fontcolor-light;
+        font-size: 1rem;
+    }
+
+    & .author {
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    & .date-readtime {
+        font-weight: 400;
+        font-size: 0.8rem;
+        color: @secondary-fontcolor-light;
+        font-family: @fontfamily-header;
+
+
+    }
+}
+
+.slide-details {
+
+    @media @desktop {
+        // position: absolute;
+    }
+}
+
+.nav-btns-next {
+    position: absolute;
+    top: 50%;
+    background-color: #F8F8F8;
+    border-radius: 50%;
+    padding: 0.3rem;
+
+    @media @desktop {
+        left: -4rem;
+    }
+}
+
+.nav-btns-prev {
+    position: absolute;
+    top: 50%;
+    background-color: #F8F8F8;
+    border-radius: 50%;
+    padding: 0.3rem;
+
+    @media @desktop {
+        right: -4rem;
+    }
+}

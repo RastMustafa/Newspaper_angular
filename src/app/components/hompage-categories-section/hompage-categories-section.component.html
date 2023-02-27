@@ -1,0 +1,18 @@
+<div class="d-lg-flex mt-5">
+  <div class="col-lg-6 pe-lg-5 mt-5 mb-3 d-flex flex-column gap-2">
+    <h3 class="pb-3 fontfamily-header">Politics</h3>
+    <app-news-card
+      *ngFor="let politicsPost of politicsPosts"
+      [post]="politicsPost"
+      [cardMode]="'showNumber'"
+    ></app-news-card>
+  </div>
+  <div class="col-lg-6 mt-5 ps-lg-5 mb-3 d-flex flex-column gap-2">
+    <h3 class="pb-3 fontfamily-header">Business</h3>
+    <app-news-card
+      *ngFor="let businessPost of businessPosts"
+      [post]="businessPost"
+      [cardMode]="'showNumber'"
+    ></app-news-card>
+  </div>
+</div>

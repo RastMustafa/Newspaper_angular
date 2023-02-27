@@ -1,0 +1,76 @@
+@primary-fontcolor-light: #252525;
+@primary-backgroundcolor-light: #F8F8F8;
+
+@secondary-fontcolor-light: #808080;
+@secondary-fontcolor-light-action: #649130;
+
+@fontfamily-body: 'Open Sans', sans-serif;
+@fontfamily-header: 'Inter', sans-serif;
+
+@desktop: ~"only screen and (min-width: 992px) ";
+@mobile: ~"only screen and (min-width: 0px) ";
+
+.nav-hero {
+
+    & .brand-name span a {
+        text-decoration: none;
+        font-size: 2.7rem;
+        cursor: pointer;
+        font-family: 'Times New Roman', Times, serif;
+        color: @primary-fontcolor-light;
+
+        &:hover {
+            color: @secondary-fontcolor-light-action;
+            transform: scale(1.3);
+            transition: all 0.2s linear;
+
+        }
+    }
+
+    & .soical-meadia-icons {
+
+        & .icon {
+            font-size: 1.6rem;
+            margin: auto 0rem;
+
+            &:hover {
+                transform: scale(1.2);
+                color: @secondary-fontcolor-light-action;
+                transition: all 0.2s linear;
+            }
+        }
+    }
+
+    & .search-form {
+
+        & button {
+            background-color: @primary-fontcolor-light;
+            color: @primary-backgroundcolor-light;
+            border-left: none;
+            border-radius: 0% 5px 5px 0%;
+            max-height: 3rem;
+
+            &:hover {
+                background-color: @secondary-fontcolor-light-action;
+                transition: all 0.2s linear;
+            }
+        }
+
+        & input {
+            min-width: 18rem;
+            border-right: none;
+            border-radius: 5px 0px 0px 5px;
+            max-height: 3rem;
+
+            @media @mobile {
+                min-width: 10rem;
+            }
+
+            @media @desktop {
+                min-width: 20rem;
+            }
+
+        }
+    }
+
+}

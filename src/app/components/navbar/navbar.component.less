@@ -1,0 +1,14 @@
+@desktop: ~"only screen and (min-width: 992px) ";
+@mobile: ~"only screen and (min-width: 0px) ";
+
+.sticky-nav {
+    background-color: white;
+}
+
+.new-nav {
+    @media @desktop {
+        background-color: white;
+        position: fixed;
+        top: 0rem;
+    }
+}

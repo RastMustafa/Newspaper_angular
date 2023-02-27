@@ -1,0 +1,29 @@
+<div
+  [ngClass]="{
+    'd-flex gap-1 card-news mb-2 card-onHover ': true,
+    'primary-backgroundcolor-light shadow-sm': !showImage
+  }"
+>
+  <div [ngClass]="{ 'col-4': !showImage, 'col-3': showImage }">
+    <h1 class="text-center">0{{ postnum + 1 }}</h1>
+  </div>
+  <div
+    [ngClass]="{
+      'text-wrap news-detail px-2': true,
+      'col-8': !showImage,
+      'col-9': showImage
+    }"
+  >
+    <div class="header">{{ post.title | slice: 0:40 }} ...</div>
+
+    <div class="auth">
+      <span class="author">{{ post.source?.name }}</span> in
+      <span class="category"> News</span>
+    </div>
+    <div class="date-readtime">
+      <span class="readtime mx-2">
+        {{ post.publishedAt | date }} <i class="fa-solid fa-star"></i>
+      </span>
+    </div>
+  </div>
+</div>

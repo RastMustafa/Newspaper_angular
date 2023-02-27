@@ -1,0 +1,40 @@
+<div
+  class="nav-hero d-flex flex-column gap-4 flex-lg-row justify-content-between py-4"
+>
+  <div
+    class="col-12 col-lg-4 brand-name primary-fontcolor-light fontfamily-header"
+  >
+    <span><a routerLink="/">NgRast</a> </span>
+  </div>
+  <div class="col-12 col-lg-8 d-flex gap-4">
+    <div class="soical-meadia-icons d-none d-lg-flex gap-3 ms-auto">
+      <span class="icon">
+        <i class="fa-brands fa-instagram"></i>
+      </span>
+      <span class="icon">
+        <i class="fa-brands fa-facebook"></i>
+      </span>
+      <span class="icon">
+        <i class="fa-brands fa-twitter"></i>
+      </span>
+    </div>
+    <div class="search-form d-flex flex-grow-1 flex-lg-grow-0 my-auto">
+      <input
+        #inputEl
+        id="search-input"
+        type="search"
+        id="form1"
+        class="form-control"
+        placeholder="Search"
+      />
+      <button
+        (click)="onSearch()"
+        id="search-button "
+        type="button"
+        class="btn px-4 search-button"
+      >
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+</div>

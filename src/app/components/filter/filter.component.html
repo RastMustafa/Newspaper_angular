@@ -1,0 +1,48 @@
+<div class="filter">
+  <div class="dropdown">
+    <a
+      class="btn btn-dark dropdown-toggle"
+      role="button"
+      id="dropdownMenuLink"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Select News Source
+    </a>
+
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <li>
+        <a (click)="onClick('bbc-news')" class="dropdown-item" id="bbc-news"
+          >BBC-NEWS</a
+        >
+      </li>
+      <li>
+        <a (click)="onClick('reuters')" class="dropdown-item" id="reuters"
+          >REUTERS</a
+        >
+      </li>
+      <li><a class="dropdown-item" id="cnn">CNN</a></li>
+      <li>
+        <a
+          (click)="onClick('business-insider')"
+          class="dropdown-item"
+          id="business-insider"
+          >{{ "business-insider" | uppercase }}</a
+        >
+      </li>
+      <li>
+        <a (click)="onClick('engadget')" class="dropdown-item" id="engadget">{{
+          "engadget" | uppercase
+        }}</a>
+      </li>
+      <li>
+        <a
+          (click)="onClick('the-washington-post')"
+          class="dropdown-item"
+          id="the-washington-post"
+          >{{ "the-washington-post" | uppercase }}</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div
+  style="width: '800px'; height: '200px'"
+  class="first-section-wrapper d-flex align-items-center overflow-hidden"
+>
+  <div class="gravatar">
+    <ngx-skeleton-loader
+      appearance="circle"
+      [theme]="{ width: '80px', height: '80px' }"
+    >
+    </ngx-skeleton-loader>
+  </div>
+  <div class="gravatar-title d-flex flex-column">
+    <div>
+      <ngx-skeleton-loader
+        [theme]="{
+          width: '800px',
+          'border-radius': '0',
+          height: '15px',
+          'margin-bottom': '10px'
+        }"
+      ></ngx-skeleton-loader>
+    </div>
+
+    <div>
+      <ngx-skeleton-loader
+        [theme]="{ width: '800px', 'border-radius': '0', height: '15px' }"
+      >
+      </ngx-skeleton-loader>
+      <div>
+        <ngx-skeleton-loader
+          [theme]="{ width: '800px', 'border-radius': '0', height: '15px' }"
+        >
+        </ngx-skeleton-loader>
+      </div>
+    </div>
+  </div>
+</div>

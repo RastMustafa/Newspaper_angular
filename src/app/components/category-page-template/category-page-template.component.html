@@ -1,0 +1,48 @@
+<div id="#cardContainer" class="row d-flex flex-wrap mt-1">
+  <div class="col-lg-8 mt-5">
+    <h3 class="pb-3 fontfamily-header">{{ category | titlecase }}</h3>
+    <div *ngIf="isFetching">
+      <app-loading-indecatort
+        *ngFor="let recentPost of recentPosts"
+      ></app-loading-indecatort>
+    </div>
+    <div *ngIf="!isFetching">
+      <app-category-main-card
+        [recentpost]="recentPost"
+        *ngFor="let recentPost of recentPosts"
+      ></app-category-main-card>
+    </div>
+  </div>
+  <div class="col-12 col-lg-4 mt-5 ps-5">
+    <h3 class="pb-3 fontfamily-header">Popular Posts</h3>
+    <div *ngIf="isFetching">
+      <app-loading-indecatort
+        *ngFor="let popularpost of popularPosts"
+      ></app-loading-indecatort>
+    </div>
+    <div *ngIf="!isFetching">
+      <app-news-card-images
+        [postnum]="i"
+        [post]="popularpost"
+        *ngFor="let popularpost of popularPosts; index as i"
+      >
+      </app-news-card-images>
+    </div>
+  </div>
+  <div class="pagination">
+    <nav aria-label="...">
+      <ul appPaginationHolder class="pagination pagination-sm">
+        <li (click)="onPageNum(1)" class="page-item" aria-current="page">
+          <a class="page-link a">1</a>
+        </li>
+        <li
+          (click)="onPageNum(i + 1)"
+          *ngFor="let i of numArray.slice(0, numArray.length - 1)"
+          class="page-item"
+        >
+          <a appPaginationBtn class="page-link a">{{ i + 1 }}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

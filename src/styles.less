@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+@primary-fontcolor-light: #252525;
+@primary-backgroundcolor-light: #F8F8F8;
+
+@secondary-fontcolor-light: #808080;
+@secondary-fontcolor-light-action: #649130;
+
+@fontfamily-body: 'Open Sans', sans-serif;
+@fontfamily-header: 'Inter', sans-serif;
+
+.primary-fontcolor-light {
+    color: @primary-fontcolor-light;
+}
+
+.primary-backgroundcolor-light {
+    background-color: @primary-backgroundcolor-light;
+}
+
+
+.secondary-fontcolor-light {
+    color: @secondary-fontcolor-light;
+}
+
+.secondary-fontcolor-light-action {
+    color: @secondary-fontcolor-light-action;
+}
+
+.fontfamily-body {
+    font-family: @fontfamily-body;
+}
+
+.fontfamily-header {
+    font-family: @fontfamily-header;
+}
+
+.nav-line {
+    border-bottom: 1px solid rgba(156, 156, 156, 0.6);
+    height: 1px;
+}
+
+// stlye all links 
+
+.card-onHover {
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 0px 2px black;
+        transition: all 0.2s linear;
+        transform: scale(1.01);
+        box-shadow: 0px 0px 1px 1px rgb(233, 233, 233);
+
+    }
+}
+
+.a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer
+}

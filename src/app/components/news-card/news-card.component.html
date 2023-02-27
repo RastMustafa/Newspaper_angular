@@ -1,0 +1,38 @@
+<a href="{{ post.url }}">
+  <div
+    [ngClass]="{
+      'd-flex gap-1 card-news mb-2 card-onHover ': true,
+      'primary-backgroundcolor-light': !showImage
+    }"
+  >
+    <div [ngClass]="{ 'col-4': !showImage, 'col-3': showImage }">
+      <img
+        class="img-style img-fluid h-100"
+        src="{{
+          post.urlToImage
+            ? post.urlToImage
+            : 'https://mybiros.com/wp-content/themes/qik/assets/images/no-image/No-Image-Found-400x264.png'
+        }}"
+        alt=""
+      />
+    </div>
+    <div
+      [ngClass]="{
+        'text-wrap news-detail px-2 p-2': true,
+        'col-8': !showImage,
+        'col-9': showImage
+      }"
+    >
+      <div class="header">{{ post.title | slice: 0:40 }} ...</div>
+
+      <div class="auth">
+        <span class="author">{{ post.source?.name }}</span>
+      </div>
+      <div class="date-readtime">
+        <span class="readtime mx-2">
+          {{ post.publishedAt | date }} <i class="fa-solid fa-star"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+</a>
